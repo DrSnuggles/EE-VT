@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Easter Egg Demo</title>
+</head>
+<body>
+  <h1>Easter Egg Demo</h1>
+  <p>Press ESC and have a look at DevConsole</p>
+
+  <script>
+  (function() {
+    window.addEventListener("keydown", eeListener);
+
+  	function eeListener() {
+      if (event.key === "Escape") {
+  			var script = document.createElement('script');
+        //script.src = "//cdn.jsdelivr.net/gh/DrSnuggles/EE-VT/ee.min.js";
+        script.src = "ee.js";
+  	    document.head.appendChild(script);
+  			window.removeEventListener("keydown", eeListener);
+  		}
+    }
+  })();
+  </script>
+
+</body>
+</html>

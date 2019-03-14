@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Osci</title>
+  <link href="app.css" rel="stylesheet"/>
+</head>
+<body>
+  <head>
+  <button id='start' onclick='start()'>Start</button>  
+  <button id='play' onclick='silence()'>Silence</button>
+
+  <div>
+    <label for='gain'>Gain</label>
+    <input id='gain' type='range' value='0.5' min='0.0' max='1.0' step='0.01' oninput='gainInp(value)' />
+    <output for='gain' id='gainVal'>0.5</output>
+  </div>
+
+  <div>
+    <label for='freq'>Freq</label>
+    <input id='freq' type='range' value='110' min='55' max='4400' step='10' oninput='freqInp(value)' />
+    <output for='freq' id='freqVal'>110</output>
+  </div>
+
+  <div>
+    <label for='shape'>Shape</label>
+    <input id='shape' type='range' value='2' min='1' max='4' step='1' oninput='shapeInp(value)' />
+    <output for='shape' id='shapeVal'>2</output>
+  </div>
+
+  <div>
+    <canvas id='scope' width=400 height=200></canvas>
+    <br>
+    <canvas id='spectrum' width=400 height=200></canvas>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
