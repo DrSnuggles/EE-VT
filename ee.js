@@ -317,8 +317,8 @@ window.ee = (function () {
   };
 
   my.play = function(src){
-    //src = "//modland.com/pub/modules/YM/" + src +".ym";
-    src = "YM/" + src +".ym";
+    src = "//modland.com/pub/modules/YM/" + src +".ym";
+    //src = "YM/" + src +".ym";
     src = src.replace(/#/g, "%23");
 
     xhr(src, function(data){
